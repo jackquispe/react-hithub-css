@@ -1,7 +1,7 @@
 import {useState} from "react";
 
-import sun from "./assets/icons/sun.png";
 
+import Head from "./components/Head";
 import UserInformation from "./components/UserInformation";
 import SearchInformation from "./components/SearchInfo";
 import Swal from "sweetalert2";
@@ -10,7 +10,8 @@ import './App.css';
 
 
 
-function App() {
+
+const App = () => {
 
     const [inputText, setInputText] = useState("")
     
@@ -39,10 +40,7 @@ function App() {
   return (
     <div className="container">
         
-        <div className="section-1">
-            <h4 className="title">devfinder</h4>
-            <button className="btn-mode">LIGHT<img width="20" src={sun} alt="" /> </button>
-        </div>
+        <Head/>
         
         <SearchInformation 
             handleInputChange={handleInputChange}
